@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+
+    background-color: aliceblue;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    padding-top: 10px;
+    position: fixed;
+
+    background-color: rgb(34, 56, 121);
+    color: white;
+    font: normal 1.1em 'Poppins';
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
+
+    box-shadow: 0px 0px 10px 5px rgba(33, 74, 206, 0.171),
+                0px 0px 12px 8px rgba(82, 128, 255, 0.096);
+
+    transition: all 0.2s;
+}
+
+.sidebar .material-symbols-outlined {
+    padding: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    text-align: center;
+    text-indent: 0;
+}
+
+.sidebar.closed {
+    width: 50px;
+}
+
+.menu {
+    width: 100%;
+    text-align: center;
+
+    display: block;
+}
+
+.submenu {
+    padding-right: 20px;
+    text-align: right;
+
+    align-items: center;
+    gap: 5px;
+
+    transition: all 0.1s;
+
+    color: rgb(83, 116, 214);
+}
+
+.submenu.material-symbols-outlined {
+    font-size: 1em;
+}
+
+.submenu:hover {
+    background-color: rgb(44, 70, 150);
+    border-left: 3px solid rgb(70, 98, 180);
+}
+
+.submenu a {
+    text-decoration: none;
+    color: white;
+
+    display: flex;
+    white-space: nowrap;
+
+    flex-direction: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#menu-toggle {
+    transition: all 0.2s;
+    margin-top: auto;
+}
+
+#menu-toggle:hover {
+    font-size: 2em;
+    transform: rotate(180deg);
+}
+
+#menu-toggle.close {
+    transform: rotate(180deg);
+}
+
+#menu-toggle.close:hover {
+    transform: rotate(360deg);
+}
